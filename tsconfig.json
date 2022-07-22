@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 16",
+  "extends": "@tsconfig/node16/tsconfig.json", /* ใช้ node 16 config */
+  "compilerOptions": {
+    "lib": [
+      "es2021"
+    ], /* กำหนดว่าตอนเขียนด้วย js version อะไร */
+    "module": "commonjs", /* กำหนดว่าจะใช้ module แบบไหน commonjs หรือ esm*/
+    "target": "es2021", /* กำหนดว่าให้ complie เป็น js version อะไร */
+    "outDir": "./dist", /* ระบุโฟลเดอร์ output (JavaScript) */
+    "rootDir": "./src", /* ระบุโฟลเดอร์ sourcecode (TypeScript) */
+    "strict": true, /* เปิดใช้ strict type-checking options*/
+    "esModuleInterop": true, /* อนุญาติให้ complie ES module เป็น commonjs*/
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node"
+  }
+}
