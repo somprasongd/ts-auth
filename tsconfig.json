@@ -14,6 +14,9 @@
     "esModuleInterop": true, /* อนุญาติให้ complie ES module เป็น commonjs*/
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "typeRoots": [
+      "./types"
+    ]
   }
 }

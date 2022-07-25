@@ -1,0 +1,19 @@
+@baseUrl=/api/v1
+@host=http://localhost:8000{{baseUrl}}
+@access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU4NzQ2MzE0LCJleHAiOjE2NTg3NDY2MTR9.2h0F1F7TczhtpwvefTUhlfk3Dy3uA7rBn9QVWUCPptg
+
+
+### Create User
+POST {{host}}/users
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+  "email": "admin@mail.com",
+  "password": "admin",
+  "role": "admin"
+}
+
+### List All User
+GET {{host}}/users
+Authorization: Bearer {{access_token}}

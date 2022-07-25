@@ -1,0 +1,49 @@
+@baseUrl=/api/v1
+@host=http://localhost:8000{{baseUrl}}
+
+### Sign Up
+POST {{host}}/auth/sign-up
+Content-Type: application/json
+
+{
+  "email": "a@a.com",
+  "password": "p@ssw0rd"
+}
+
+### Sign In Admin
+POST {{host}}/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "admin@mail.com",
+  "password": "admin"
+}
+
+### Sign In
+POST {{host}}/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "a@a.com",
+  "password": "p@ssw0rd"
+}
+
+### Sign Out
+POST {{host}}/auth/sign-out
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Mzc2OWNmODM4MTU2N2I5ZDMxOWM3YmU3ODY3NDg1OCIsImlhdCI6MTY1ODc0MDM3OCwiZXhwIjoxNjU5MzQ1MTc4fQ.hP4oopXOeNhSOJFz48ocsXG-rUIK6mrJJJcETaAkXxI"
+}
+
+### Refresh
+POST {{host}}/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Mzc2OWNmODM4MTU2N2I5ZDMxOWM3YmU3ODY3NDg1OCIsImlhdCI6MTY1ODc0MDM3OCwiZXhwIjoxNjU5MzQ1MTc4fQ.hP4oopXOeNhSOJFz48ocsXG-rUIK6mrJJJcETaAkXxI"
+}
+
+### Get Profile
+GET {{host}}/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU4NzQ0NjMwLCJleHAiOjE2NTg3NDQ5MzB9.05ahdJTdpf7qO3Za9tGeGWZeXuX04-p5VbcU5lDO-PU

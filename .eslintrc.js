@@ -16,7 +16,7 @@ module.exports = {
     // "prettier",
   ],
   rules: {
-    'no-console': 1, // Means warning
+    'no-console': 0,
     'prettier/prettier': [
       'error',
       {
